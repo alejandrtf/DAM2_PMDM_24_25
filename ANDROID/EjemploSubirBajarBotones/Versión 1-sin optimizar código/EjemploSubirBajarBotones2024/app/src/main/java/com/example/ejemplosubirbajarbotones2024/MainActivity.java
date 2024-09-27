@@ -14,7 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
     EditText etPalabraArriba, etPalabraAbajo;
-    Button btSubir, btBajar, btEnviar;
+    Button btSubir, btBajar;
     String texto;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
