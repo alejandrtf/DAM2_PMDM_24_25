@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/ejemplo_spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spProcesadores"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvProcesadoresLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo" />
+
+    <TextView
+        android:id="@+id/tvProcesadoresLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/procesadores"
+        app:layout_constraintBottom_toBottomOf="@+id/spProcesadores"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/spProcesadores" />
+
+    <Spinner
+        android:id="@+id/spEstadoCivil"
+        android:layout_width="0dp"
+        style="@android:style/Widget.Spinner"
+        android:prompt="@string/elige_estado_civil"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvEstadoCivilLabel"
+        app:layout_constraintTop_toBottomOf="@+id/spProcesadores" />
+
+    <TextView
+        android:id="@+id/tvEstadoCivilLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/estado_civil"
+        app:layout_constraintBottom_toBottomOf="@+id/spEstadoCivil"
+        app:layout_constraintStart_toStartOf="@+id/tvProcesadoresLabel"
+        app:layout_constraintTop_toTopOf="@+id/spEstadoCivil" />
+
+    <Spinner
+        android:id="@+id/spPaises"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvPaisesLabel"
+        app:layout_constraintTop_toBottomOf="@+id/spEstadoCivil" />
+
+    <TextView
+        android:id="@+id/tvPaisesLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/paises"
+        app:layout_constraintStart_toStartOf="@+id/tvEstadoCivilLabel"
+        app:layout_constraintTop_toTopOf="@+id/spPaises" />
+
+    <View
+        android:id="@+id/separador"
+        android:layout_width="0dp"
+        android:layout_height="4dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="#9C27B0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spPaises" />
+
+    <TextView
+        android:id="@+id/tvTituloListaCompra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="casual"
+        android:text="@string/lista_de_la_compra"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/separador" />
+
+    <Spinner
+        android:id="@+id/spProductosDisponibles"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvProductosDisponiblesLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloListaCompra" />
+
+    <TextView
+        android:id="@+id/tvProductosDisponiblesLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/productos"
+        app:layout_constraintBottom_toBottomOf="@+id/spProductosDisponibles"
+        app:layout_constraintStart_toStartOf="@+id/separador"
+        app:layout_constraintTop_toTopOf="@+id/spProductosDisponibles" />
+
+    <Button
+        android:id="@+id/btAniadirCesta"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:drawableTop="@drawable/ic_shopping_cart"
+        android:text="@string/a_adir_carrito"
+
+        app:layout_constraintBottom_toBottomOf="@+id/btBorrarDelCarrito"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btBorrarDelCarrito" />
+
+    <Button
+        android:id="@+id/btBorrarDelCarrito"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:drawableTop="@android:drawable/ic_menu_delete"
+        android:text="@string/borrar_del_carrito"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spProductosDisponibles" />
+
+    <TextView
+        android:id="@+id/tvCarritoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="casual"
+        android:text="@string/carrito_de_la_compra"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btBorrarDelCarrito" />
+
+    <Spinner
+        android:id="@+id/spCarrito"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCarritoLabel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

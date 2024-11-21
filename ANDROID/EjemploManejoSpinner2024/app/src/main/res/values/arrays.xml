@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="estados_civiles">
+        <item>Soltero/a</item>
+        <item>Casado/a</item>
+        <item>Divorciado/a</item>
+        <item>Separado/a</item>
+        <item>Viudo/a</item>
+    </string-array>
+
+    <string-array name="paises">
+        <item>España</item>
+        <item>Francia</item>
+        <item>Italia</item>
+        <item>Alemania</item>
+        <item>Hungría</item>
+    </string-array>
+</resources>
