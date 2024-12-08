@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".GrisFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Escribe una palabra" />
+
+    <EditText
+        android:id="@+id/etPalabra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#BAB0B0"
+        android:ems="10"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/btInvertir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="INVERTIR" />
+
+</LinearLayout>
