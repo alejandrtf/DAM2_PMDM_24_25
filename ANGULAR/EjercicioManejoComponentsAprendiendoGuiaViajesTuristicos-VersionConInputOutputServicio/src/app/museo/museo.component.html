@@ -1,0 +1,13 @@
+<div class="col-md-8 mb-4 mx-auto">
+    <div class="card" >
+        <div class="card-header text-dark" [style.background-color]="color">🏛️ {{titulo}}</div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item d-flex align-items-center" *ngFor="let museo of museos" >{{ museo }}   
+                <input class="ms-2" #inputEditarNombreMuseo type="text" placeholder="Nuevo nombre del museo">
+                <button class="btn ms-auto" [style.background-color]="color" 
+                (click)="editarMuseo(museo, inputEditarNombreMuseo.value)">Guardar</button>
+            </li>
+        </ul>
+    </div>
+</div>
+

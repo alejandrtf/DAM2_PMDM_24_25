@@ -1,0 +1,16 @@
+<div class="container mt-5">
+  <h1 class="text-center">✈️ Guía de viajes</h1>
+  <div class="col-md-6 mb-4 mx-auto">
+    <input type="text" class="form-control mt-3"
+      placeholder="Escribe una sección (excursiones, restaurantes, museos, hoteles)"
+       [value]="filtroSeccion"
+      (change)="onInputChange($event)">
+  </div>
+  <div class="row mt-4">
+    <app-excursion  (excursionAñadida)="manejarExcursion($event)" *ngIf="filtroSeccion === '' || filtroSeccion === 'excursiones'"></app-excursion>
+    <app-restaurante *ngIf="filtroSeccion === '' || filtroSeccion === 'restaurantes'"></app-restaurante>
+    <app-museo [color]="'gold'" [titulo]="'Galerías de Arte'" *ngIf="filtroSeccion === '' || filtroSeccion === 'museos'"></app-museo>
+    <app-museo [color]="'silver'" [titulo]="'Historia y Cultura'" *ngIf="filtroSeccion === '' || filtroSeccion === 'museos'"></app-museo>
+    <app-hotel *ngIf="filtroSeccion === '' || filtroSeccion === 'hoteles'"></app-hotel>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="col-md-8 mb-4 mx-auto">
+    <div class="card">
+        <div class="card-header bg-success text-white">🍽️ Restaurantes recomendados</div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item d-flex align-items-center" *ngFor="let restaurante of restaurantes">{{ restaurante }}
+                <button class="btn btn-success" (click)="eliminarRestaurante(restaurante)" style="margin-left: auto;">
+                    Eliminar 
+                    <img src="../../assets/images/trash_icon.png" alt="Eliminar restaurante" style="width: 20px; filter:invert(100%); margin-left: 5px;"/>     
+                </button>
+            </li>
+        </ul>
+    </div>
+</div>
+
